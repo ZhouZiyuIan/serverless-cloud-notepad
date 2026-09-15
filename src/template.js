@@ -72,7 +72,7 @@ const HTML = ({ lang, title, content, ext = {}, tips, isEdit, showPwPrompt }) =>
     ${(ext.mode === 'md' || ext.share) ? `<script src="${CDN_PREFIX}/js/purify.min.js"></script>` : ''}
     ${ext.mode === 'md' ? `<script src="${CDN_PREFIX}/js/marked.min.js"></script>` : ''}
     ${ext.mode === 'md' ? `<script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js" crossorigin="anonymous"></script>` : ''}
-    ${ext.mode === 'md' ? `<script src="<script src="https://cdn.jsdelivr.net/npm/marked-katex-extension/lib/index.umd.js"></script>" crossorigin="anonymous"></script>` : ''}
+    ${ext.mode === 'md' ? `<script src="https://cdn.jsdelivr.net/npm/marked-katex-extension/lib/index.umd.js" crossorigin="anonymous"></script>` : ''}
     <script src="${CDN_PREFIX}/js/clip.min.js"></script>
     <script src="${CDN_PREFIX}/js/app.min.js"></script>
     ${showPwPrompt ? '<script>passwdPrompt()</script>' : ''}
