@@ -49,6 +49,7 @@ const HTML = ({ lang, title, content, ext = {}, tips, isEdit, showPwPrompt }) =>
     <title>${title} — Cloud Notepad</title>
     <link href="${CDN_PREFIX}/favicon.ico" rel="shortcut icon" type="image/ico" />
     <link href="${CDN_PREFIX}/css/app.min.css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" crossorigin="anonymous" />
 </head>
 <body>
     <div class="note-container">
@@ -70,7 +71,8 @@ const HTML = ({ lang, title, content, ext = {}, tips, isEdit, showPwPrompt }) =>
     ${FOOTER({ ...ext, isEdit, lang })}
     ${(ext.mode === 'md' || ext.share) ? `<script src="${CDN_PREFIX}/js/purify.min.js"></script>` : ''}
     ${ext.mode === 'md' ? `<script src="${CDN_PREFIX}/js/marked.min.js"></script>` : ''}
-    ${ext.mode === 'md' ? `<script src="${CDN_PREFIX}/js/tex-mml-chtml.js"></script>` : ''}
+    ${ext.mode === 'md' ? `<script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js" crossorigin="anonymous"></script>` : ''}
+    ${ext.mode === 'md' ? `<script src="<script src="https://cdn.jsdelivr.net/npm/marked-katex-extension/lib/index.umd.js"></script>" crossorigin="anonymous"></script>` : ''}
     <script src="${CDN_PREFIX}/js/clip.min.js"></script>
     <script src="${CDN_PREFIX}/js/app.min.js"></script>
     ${showPwPrompt ? '<script>passwdPrompt()</script>' : ''}
